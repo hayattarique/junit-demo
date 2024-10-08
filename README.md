@@ -14,8 +14,7 @@ To run this project, you need to have the following tools installed:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/junit-demo.git
-    cd junit-demo
+    https://github.com/hayattarique/junit-demo.git
     ```
 
 2. Add the following **JUnit 5** dependency to your `pom.xml`:
