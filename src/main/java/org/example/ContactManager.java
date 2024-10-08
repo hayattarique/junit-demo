@@ -13,7 +13,6 @@ public class ContactManager {
         validateContact(contact);
         checkIfContactAlreadyExist(contact);
         contactMap.put(generateKey(contact), contact);
-        System.out.println(contactMap);
     }
 
     public Collection<Contact> getAllContacts() {

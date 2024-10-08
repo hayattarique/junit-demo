@@ -7,9 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @TestInstance(Lifecycle.PER_CLASS)
 public class ContactManagerTest {
-    public ContactManagerTest() {
-        System.out.println("ContactManagerTest.ContactManagerTest");
-    }
+
 
     private ContactManager manager;
 
@@ -35,6 +33,7 @@ public class ContactManagerTest {
         });
     }
 
+
     @Test
     @DisplayName("throwing exception if lastName is empty")
     void throwExceptionIfLastNameIsEmpty() {
@@ -49,6 +48,13 @@ public class ContactManagerTest {
         assertThrows(RuntimeException.class, () -> {
             manager.addContact("Tariq", "Hayat", null);
         });
+    }
+
+    @Test
+    @DisplayName("throwing exception if contactNo length is mismatch")
+    void throwExceptionIfContactLengthMisMatch() {
+        assertThrows(RuntimeException.class, () -> manager.addContact("Hayat", "Tarique", "797979780011"));
+
     }
 
     @Test
